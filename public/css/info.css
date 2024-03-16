@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.item{
+    background-color: lavenderblush;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    width: 30%;
+    border: 1px solid rgba(214, 249, 241, 0.628);
+}
+
