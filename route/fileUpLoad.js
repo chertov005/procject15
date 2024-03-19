@@ -62,9 +62,9 @@ router.post('/' , async(req , res) => {
         if(myFile.size <= 1024*1024*4) {
 
             let exts_array = ['.jpg' , '.jpeg ' ,'.jfif ' ,'.pjpeg ' ,'.pjp', '.png']
-            let fileExts = path.extname(myFile.name) 
+            let checkFileExts = path.extname(myFile.name) 
 
-            if(exts_array.includes(fileExts)) {
+            if(exts_array.includes(checkFileExts)) {
 
                 myFile.mv(`public/image/${myFile.name}` , (err) => {
                     if(err) {
@@ -73,25 +73,17 @@ router.post('/' , async(req , res) => {
     
                     return res.json({message:'success upload your file'})
                 })
-
             }
-            
             else{
             
                 return res.json({message:'unconfirmed file'})
 
             }
-            
-
-           
-
         } 
-
 
         else{
          
             res.json({message:'your file over 5MB , max 5MB'})
-            
         }
 
     } catch (error) {    
@@ -99,13 +91,5 @@ router.post('/' , async(req , res) => {
     }
 
 });
-
-
-
-
-
-
-
-
 
 module.exports = router ;
