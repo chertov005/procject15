@@ -20,7 +20,7 @@ router.get('/' ,async(req , res) => {
         
         
     } catch (error) {
-        return res.status(500) .json({message:'internal sever error 500 '})
+        return res.status(500) .json({message:'internal sever error 500 eroor '})
     }
 
 
